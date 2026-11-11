@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "text": "【双十一】全网最低价，史上最强优惠，错过再等一年！",
+    "expectPass": false,
+    "expectRule": 9,
+    "note": "绝对化用语：全网最低价、史上最强"
+  },
+  {
+    "id": 2,
+    "text": "【会员通知】亲爱的用户，您的积分将于本月底到期，请及时登录 App 兑换礼品。",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "普通会员通知"
+  },
+  {
+    "id": 3,
+    "text": "本店招牌牛肉面，堪称国家级美味，吃过的都说好。",
+    "expectPass": false,
+    "expectRule": 9,
+    "note": "绝对化用语：国家级"
+  },
+  {
+    "id": 4,
+    "text": "这款面霜的保湿效果无人能及，市面上没有任何一款产品能超越它。",
+    "expectPass": false,
+    "expectRule": 9,
+    "note": "隐晦绝对化：无人能及、无法超越（没有'最'字）"
+  },
+  {
+    "id": 5,
+    "text": "XX理财新品上线，年化收益 8%，保本保息，稳赚不赔！",
+    "expectPass": false,
+    "expectRule": 25,
+    "note": "金融理财：保本保息、稳赚不赔"
+  },
+  {
+    "id": 6,
+    "text": "加盟我们的奶茶品牌，3 个月回本，一年净赚 50 万，零风险！",
+    "expectPass": false,
+    "expectRule": 25,
+    "note": "招商投资：回本承诺、零风险"
+  },
+  {
+    "id": 7,
+    "text": "跟着导师操作，每月稳定多赚一份工资，亏了全额补偿。",
+    "expectPass": false,
+    "expectRule": 25,
+    "note": "隐晦保收益：没有'保本'二字，但承诺稳定收益和兜底"
+  },
+  {
+    "id": 8,
+    "text": "本草祖传秘方，包治百病，三天见效，无效退款。",
+    "expectPass": false,
+    "expectRule": 16,
+    "note": "医疗：包治百病、功效保证"
+  },
+  {
+    "id": 9,
+    "text": "XX降压茶，坚持喝一个月，高血压彻底根除，从此不用再吃药。",
+    "expectPass": false,
+    "expectRule": 16,
+    "note": "医疗：根除、替代药物"
+  },
+  {
+    "id": 10,
+    "text": "我们的理疗仪已帮助 98% 的用户摆脱腰椎疼痛。",
+    "expectPass": false,
+    "expectRule": 16,
+    "note": "隐晦医疗：说明有效率（语气平和，没有夸张词）"
+  },
+  {
+    "id": 11,
+    "text": "用了我们的洗发水，一周内白发全部变黑，秃顶也能重新长出头发。",
+    "expectPass": false,
+    "expectRule": 28,
+    "note": "虚构使用效果"
+  },
+  {
+    "id": 12,
+    "text": "本活动已连续延期 12 次，今天真的是最后一天，错过再也没有！",
+    "expectPass": false,
+    "expectRule": 28,
+    "note": "隐晦虚构限时：反复延期却称最后一天"
+  },
+  {
+    "id": 13,
+    "text": "已有 100 万用户使用后一个月瘦 30 斤，不节食不运动。",
+    "expectPass": false,
+    "expectRule": 28,
+    "note": "虚构使用效果"
+  },
+  {
+    "id": 14,
+    "text": "【XX银行】您的账户存在异常，请点击 http://bit.ly/x8k2 验证身份，否则 24 小时内冻结。",
+    "expectPass": false,
+    "expectRule": 101,
+    "note": "钓鱼：假冒银行 + 陌生短链接"
+  },
+  {
+    "id": 15,
+    "text": "恭喜您被抽中为幸运用户，获得 iPhone 一部，请先支付 99 元邮费到账户 6222 0201 xxxx 领取。",
+    "expectPass": false,
+    "expectRule": 101,
+    "note": "诈骗：中奖 + 先转账"
+  },
+  {
+    "id": 16,
+    "text": "【客服】您好，为核实您的退款申请，请将刚收到的 6 位短信验证码回复给我们。",
+    "expectPass": false,
+    "expectRule": 101,
+    "note": "隐晦诈骗：语气像正常客服，实为套取验证码"
+  },
+  {
+    "id": 17,
+    "text": "【顺丰速运】您的快递已到达小区驿站，取件码 6-2-3018，请于今日 20:00 前取件。",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "物流通知"
+  },
+  {
+    "id": 18,
+    "text": "【招商银行】您尾号 8848 的信用卡本期账单 1280.00 元，最后还款日 11 月 25 日。",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "账单通知（真银行，不含链接和转账要求）"
+  },
+  {
+    "id": 19,
+    "text": "【TickFlow】您的验证码为 482913，5 分钟内有效，请勿泄露给他人。",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "验证码通知（提醒勿泄露，和 #16 相反）"
+  },
+  {
+    "id": 20,
+    "text": "【美团】您预订的 11 月 12 日 18:30 晚餐已确认，请准时到店，如需取消请提前 2 小时操作。",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "预订确认"
+  },
+  {
+    "id": 21,
+    "text": "【XX书店】双十一活动：全场图书满 100 减 20，活动时间 11 月 1 日至 11 月 11 日。",
+    "expectPass": false,
+    "expectRule": 43,
+    "note": "正常促销：规则和期限明确（营销短信未提供退订方式，违反第四十三条；11/11 对照实验发现后改标）"
+  },
+  {
+    "id": 22,
+    "text": "【XX健身】本周六上午 10 点有免费瑜伽体验课，名额 20 人，回复 1 预约。",
+    "expectPass": false,
+    "expectRule": 43,
+    "note": "活动邀约：真实限量（营销短信未提供退订方式，违反第四十三条；11/11 对照实验发现后改标）"
+  },
+  {
+    "id": 23,
+    "text": "【XX电器】您购买的空调将于明天上午 9~12 点上门安装，请保持电话畅通。",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "服务通知"
+  },
+  {
+    "id": 24,
+    "text": "[排队小程序] 郭淑芬鲜切牛肉自助老火锅 喊您吃饭啦，你目前的排位为 第1位 ，前方还剩 0 桌",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "小程序通知"
+  },
+  {
+    "id": 25,
+    "text": "[计算机程序设计大赛-省赛]经过赛组委的严密讨论，你提交的作品[Code everything] 被评选为第一名",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "比赛通知"
+  },
+  {
+    "id": 26,
+    "text": "感谢您选择联想拯救者，您的产品已经激活，可享受2年售后质保服务",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "购物信息"
+  },
+  {
+    "id": 27,
+    "text": "感谢您购买XX基金，投资有风险，股市需谨慎，我司不对产品收益做出任何承诺",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "理财信息"
+  },
+  {
+    "id": 28,
+    "text": "【XX医院】 您预定的 XX药 目前已经进货在售，请挂号前往购买",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "医院信息"
+  },
+  {
+    "id": 29,
+    "text": "新设备登录验证：在未绑定过的新设备上首次登录《原神》时，系统会触发安全验证，请前往米游社验证信息 https://genshin.hoyoverse.com/",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "游戏信息"
+  },
+  {
+    "id": 30,
+    "text": "您预购的 [奶娃捧腹大笑] 已经开始预制作，请于7天内补缴尾款，否则视为放弃购买",
+    "expectPass": true,
+    "expectRule": null,
+    "note": "购物信息"
+  }
+]

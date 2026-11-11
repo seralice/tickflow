@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  # 密钥从环境变量读取；本地开发可以写在 application-local.yml（不提交），存在时自动加载并覆盖这里的值
+  config:
+    import: optional:classpath:application-local.yml
+  datasource:
+    url: jdbc:mysql://localhost:3306/tickflow?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    username: root
+    password: ${DB_PASSWORD:}
+  sql:
+    init:
+      # 启动时自动执行建表脚本（脚本里用 IF NOT EXISTS，重复执行无害）
+      mode: always
+      schema-locations: classpath:db/schema.sql
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      # 保证消息有序且不丢失
+      acks: all
+      retries: 3
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 3000ms
+
+mybatis:
+  configuration:
+    # 数据库下划线字段 trigger_time 自动映射到 Java 驼峰字段 triggerTime
+    map-underscore-to-camel-case: true
+
+# AI 大模型与向量检索合规审查配置（标准 OpenAI 兼容格式）
+ai:
+  openai:
+    base-url: ${AI_BASE_URL:https://api.openai.com/v1}
+    api-key: ${AI_API_KEY:}
+    chat-model: ${AI_CHAT_MODEL:gpt-4o-mini}
+  embedding:
+    base-url: ${AI_EMBEDDING_BASE_URL:https://api.siliconflow.cn/v1}
+    api-key: ${AI_EMBEDDING_API_KEY:}
+    model: ${AI_EMBEDDING_MODEL:BAAI/bge-m3}

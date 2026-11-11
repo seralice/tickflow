@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.seralice</groupId>
+		<artifactId>tickflow</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>tickflow-service-api-impl</artifactId>
+	<description>接入层实现：SendService 实现与发送责任链（校验 → 组装 → 后置检查 → 写入 MQ）</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.seralice</groupId>
+			<artifactId>tickflow-service-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.seralice</groupId>
+			<artifactId>tickflow-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>tools.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+	</dependencies>
+</project>
