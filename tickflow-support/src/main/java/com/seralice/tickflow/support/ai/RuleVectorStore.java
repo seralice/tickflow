@@ -70,10 +70,19 @@ public class RuleVectorStore {
                     return;
                 }
 
+                // 没配密钥时每条请求都要等到失败，几十条法规会把启动拖住几分钟；只跳过检索，其余功能不受影响
+                boolean embeddingEnabled = !embeddingApiKey.isBlank();
+                if (!embeddingEnabled) {
+                    log.warn("[RuleVectorStore] 未配置 AI_EMBEDDING_API_KEY，跳过行业规则向量化，审核只使用通用规则");
+                }
+
                 log.info("[RuleVectorStore] 正在初始化广告法规则向量索引 (条目数: {})...", items.size());
                 for (RuleItem item : items) {
                     if ("global".equals(item.getScope())) {
                         globalRules.add(item);
+                        continue;
+                    }
+                    if (!embeddingEnabled) {
                         continue;
                     }
                     // 把法条名称与具体规则拼接后计算向量

@@ -12,6 +12,7 @@ private/
 generate_resume_script.py
 *-local.yml
 application-local.properties
+.env
 *.zip
 
 ### STS ###

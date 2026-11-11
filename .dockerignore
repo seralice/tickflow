@@ -1,0 +1,9 @@
+# application-local.yml 存放真实密钥，绝不能被 COPY 进镜像
+**/*-local.yml
+**/target/
+.git/
+.idea/
+private/
+CLAUDE.md
+generate_resume_script.py
+.env

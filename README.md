@@ -90,6 +90,16 @@ Austin 是功能完整的通用推送平台，接入了多种 MQ、配置中心�
 
 ## 本地运行
 
+**方式一：Docker Compose（只需要 Docker）**
+
+```bash
+docker compose up -d --build     # MySQL、Redis、Kafka（KRaft）和应用一起启动，应用等依赖健康检查通过后才启动
+```
+
+AI 审核需要的密钥写在项目根目录的 `.env` 里（已被 `.gitignore` 排除，变量名见下表）。不配置也能启动，只是营销模板的审核会失败并进入重试。
+
+**方式二：本机运行**
+
 依赖：JDK 21、MySQL 8、Redis 7、Kafka（KRaft 单节点即可）。
 
 1. 创建数据库 `tickflow`，表结构在启动时由 `tickflow-web/src/main/resources/db/schema.sql` 自动创建。
